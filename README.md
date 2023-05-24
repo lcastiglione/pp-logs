@@ -25,7 +25,7 @@ python -m unittest discover -s 'tests' -p 'test_logs.py'
 ## Instalación
 
 ```bash
-pipenv install git+https://github.com/lcastiglione/pp-schedule#egg=logs
+pipenv install git+https://github.com/lcastiglione/pp-logs#egg=logs
 ```
 
 
@@ -46,14 +46,14 @@ custom_logger = CustomLogger()
 #Imprimir solo logs de nivel `ERROR` o superior
 custom_logger.set_level(logging.ERROR)
 
-# Cargar el handler mostrar por consola los mensajes en formato JSON 
+# Cargar el handler mostrar por consola los mensajes en formato JSON
 # (Se hace por default)
 custom_logger.set_json_handler()
 
 # Remover el handler JSON
 custom_logger.remove_json_handler()
 
-# Cargar el handler para guardar los logs en una variable y que no 
+# Cargar el handler para guardar los logs en una variable y que no
 # salgan por consola
 custom_logger.set_stream_handler()
 log_contents = custom_logger.get_stream_value()
