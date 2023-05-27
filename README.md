@@ -33,7 +33,7 @@ pipenv install git+https://github.com/lcastiglione/pp-logs#egg=logs
 ## Ejemplo de uso
 
 ```python
-from logs.logs import logger,CustomLogger
+from logs.logger import logger,CustomLogger
 
 # Imprimir log en pantalla
 print(logger.info('test'))
