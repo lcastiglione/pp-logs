@@ -23,7 +23,7 @@ class CustomJsonFormatter(jsonlogger.JsonFormatter):
 
         self._fmt = '%(asctime)s %(levelname)s %(message)s'
         if record.levelno >= logging.ERROR:
-            self._fmt += ' %(filename)s %(funcName)s %(levelno)s %(lineno)d %(module)s %(pathname)s %(process)d %(processName)s %(thread)d'
+            self._fmt += ' %(filename)s %(funcName)s %(levelno)s %(lineno)d %(module)s %(pathname)s %(process)d %(processName)s %(thread)d %(exec_info)s'
         self._required_fields = self.parse()
         super().add_fields(log_record, record, message_dict)
 
