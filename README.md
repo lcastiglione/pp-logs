@@ -8,16 +8,25 @@ Esta librería contiene funciones para el manejo de logs. La idea es unificar cr
 
 ## Desarrollo
 
-Crear archivo `requirements.txt`:
+### Crear archivo `requirements.txt`:
 
 ```bash
 pipenv requirements > requirements.txt
 ```
 
-Tests:
+### Tests:
 
 ```bash
 python -m unittest discover -s 'tests' -p 'test_logs.py'
+```
+
+### Control de versiones:
+
+```bash
+git tag -a <tag> -m "<descripcion>" # Crear tag local
+git push origin <tag> 				# Subir tag a repositorio remoto
+git tag -d <tag> 					# Eliminar tag en forma local
+git push --delete origin <tag>      # Subir tag a repositorio remoto
 ```
 
 
@@ -25,7 +34,7 @@ python -m unittest discover -s 'tests' -p 'test_logs.py'
 ## Instalación
 
 ```bash
-pipenv install git+https://github.com/lcastiglione/pp-logs#egg=logs
+pipenv install git+https://github.com/lcastiglione/pp-logs.git@<tag>#egg=logs
 ```
 
 
