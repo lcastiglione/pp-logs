@@ -14,6 +14,13 @@ Esta librería contiene funciones para el manejo de logs. La idea es unificar cr
 pipenv requirements > requirements.txt
 ```
 
+Si en el archivo `requirements.txt` hay una dependencia que viene de Github, deberá estar definida de la siguiente manera:
+```txt
+<name> @ git+https://github.com/<user>/<repo_name>.git@<id>#egg=<package>
+```
+
+
+
 ### Tests:
 
 ```bash
